@@ -3,7 +3,7 @@
 <p class="paginator">
 {% if pagination_required %}
 {% for i in page_range %}
-    {% paginator_number cl i %}
+	{% paginator_number cl i %}
 {% endfor %}
 {% endif %}
 {{ cl.result_count }} {% ifequal cl.result_count 1 %}{{ cl.opts.verbose_name }}{% else %}{{ cl.opts.verbose_name_plural }}{% endifequal %}

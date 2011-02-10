@@ -15,10 +15,10 @@
 
 {% block breadcrumbs %}{% if not is_popup %}
 <div class="breadcrumbs">
-     <a href="../../../">{% trans "Home" %}</a> &rsaquo;
-     <a href="../../">{{ app_label|capfirst|escape }}</a> &rsaquo; 
-     {% if has_change_permission %}<a href="../">{{ opts.verbose_name_plural|capfirst }}</a>{% else %}{{ opts.verbose_name_plural|capfirst }}{% endif %} &rsaquo; 
-     {% if add %}{% trans "Add" %} {{ opts.verbose_name }}{% else %}{{ original|truncatewords:"18" }}{% endif %}
+	 <a href="../../../">{% trans "Home" %}</a> &rsaquo;
+	 <a href="../../">{{ app_label|capfirst|escape }}</a> &rsaquo;
+	 {% if has_change_permission %}<a href="../">{{ opts.verbose_name_plural|capfirst }}</a>{% else %}{{ opts.verbose_name_plural|capfirst }}{% endif %} &rsaquo;
+	 {% if add %}{% trans "Add" %} {{ opts.verbose_name }}{% else %}{{ original|truncatewords:"18" }}{% endif %}
 </div>
 {% endif %}{% endblock %}
 
@@ -35,10 +35,10 @@
 {% if is_popup %}<input type="hidden" name="_popup" value="1" />{% endif %}
 {% if save_on_top %}{% submit_row %}{% endif %}
 {% if errors %}
-    <p class="errornote">
-    {% blocktrans count errors|length as counter %}Please correct the error below.{% plural %}Please correct the errors below.{% endblocktrans %}
-    </p>
-    {{ adminform.form.non_field_errors }}
+	<p class="errornote">
+	{% blocktrans count errors|length as counter %}Please correct the error below.{% plural %}Please correct the errors below.{% endblocktrans %}
+	</p>
+	{{ adminform.form.non_field_errors }}
 {% endif %}
 
 {% for fieldset in adminform %}
@@ -48,7 +48,7 @@
 {% block after_field_sets %}{% endblock %}
 
 {% for inline_admin_formset in inline_admin_formsets %}
-    {% include inline_admin_formset.opts.template %}
+	{% include inline_admin_formset.opts.template %}
 {% endfor %}
 
 {% block after_related_objects %}{% endblock %}
