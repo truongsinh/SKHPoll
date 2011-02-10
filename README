@@ -10,4 +10,11 @@ Note:
 	4. Indent the whole block
 	5. Run django console
 
+<<<<<<< HEAD
 Kari was here!
+=======
+TruongSinh here!
+--push
+I really  checked it Sirak,
+TruongSinh uses Sirak account to push!
+>>>>>>> a2e50eabbea97d90b6e53ed4b6558ccfd6c1cc54
